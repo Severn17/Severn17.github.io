@@ -148,6 +148,70 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-BinarySearch" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/30/BinarySearch/">BinarySearch</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/30/BinarySearch/" class="archive-article-date">
+  	<time datetime="2017-11-30T10:13:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="算法第四版-二分法"><a href="#算法第四版-二分法" class="headerlink" title="算法第四版_二分法"></a><font color="orange" size="10">算法第四版_二分法</font></h2><p>/// <summary><br>/// 二分查找     递归<br>/// </summary><br>/// <param name="arr"><br>/// <param name="low">开始索引 0<br>/// <param name="high">结束索引 <br>/// <param name="key">要查找的对象<br>/// <returns></returns><br>public static int BinarySearch(int[] arr, int low, int high, int key)<br>{<br>    int mid = (low + high) / 2;<br>    if (low &gt; high)<br>        return -1;<br>    else<br>    {<br>        if (arr[mid] == key)<br>            return mid;<br>        else if (arr[mid] &gt; key)<br>            return BinarySearch(arr, low, mid - 1, key);<br>        else<br>            return BinarySearch(arr, mid + 1, high, key);<br>    }<br>}</p>
+<p>/// <summary><br>/// 二分查找     非递归<br>/// </summary><br>/// <param name="arr"><br>/// <param name="key">要查找的对象<br>/// <returns></returns><br>public static int BinarySearch(int key,int[] arr)<br>{<br>    int low = 0;<br>    int max = arr.Length - 1;<br>    while (low&lt;=max)<br>    {<br>        int mid = low + (max - low) / 2;<br>        if (key <arr[ mid])="" max="mid" -="" 1;="" else="" if="" (key="">arr[ mid]) low = mid + 1;<br>        else return mid;<br>    }<br>    return -1;<br>}</arr[></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/30/BinarySearch/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-HexoUse" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -357,11 +421,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">杂记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂记</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
             
             <div class="clearfix"></div>
