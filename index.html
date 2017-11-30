@@ -151,26 +151,14 @@ var _hmt = _hmt || [];
     <article id="post-BinarySearch" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/30/BinarySearch/">BinarySearch</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/30/BinarySearch/" class="archive-article-date">
-  	<time datetime="2017-11-30T10:13:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-30</time>
-</a>
-        
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="算法第四版-二分法"><a href="#算法第四版-二分法" class="headerlink" title="算法第四版_二分法"></a><font color="orange" size="10">算法第四版_二分法</font></h2><p><font color="#87CEFA" size="5">二分查找   递归</font><br>/// <param name="arr">数组<br>/// <param name="low">开始索引 0<br>/// <param name="high">结束索引 <br>/// <param name="key">要查找的对象<br>/// <returns></returns><br>public static int BinarySearch(int[] arr, int low, int high, int key)<br>{<br>    int mid = (low + high) / 2;<br>    if (low &gt; high)<br>        return -1;<br>    else<br>    {<br>        if (arr[mid] == key)<br>            return mid;<br>        else if (arr[mid] &gt; key)<br>            return BinarySearch(arr, low, mid - 1, key);<br>        else<br>            return BinarySearch(arr, mid + 1, high, key);<br>    }<br>}</p>
-<p><font color="#87CEFA" size="5">二分查找   非递归</font><br>/// <param name="arr">数组<br>/// <param name="key">要查找的对象<br>public static int BinarySearch(int key,int[] arr)<br>{<br>    int low = 0;<br>    int max = arr.Length - 1;<br>    while (low&lt;=max)<br>    {<br>        int mid = low + (max - low) / 2;<br>        if (key <arr[ mid])="" max="mid" -="" 1;="" else="" if="" (key="">arr[ mid]) low = mid + 1;<br>        else return mid;<br>    }<br>    return -1;<br>}</arr[></p>
-
+        <h2 id="算法第四版-二分法"><a href="#算法第四版-二分法" class="headerlink" title="算法第四版_二分法"></a><font color="orange" size="10">算法第四版_二分法</font></h2><p><font color="#87CEFA" size="6">二分查找</font><br>二分查找又称折半查找，优点是比较次数少，查找速度快，平均性能好，占用系统内存较少；其缺点是要求待查表为有序表，且插入删除困难。因此，折半查找方法适用于不经常变动而查找频繁的有序列表。首先，假设表中元素是按升序排列，将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找到满足条件的记录，使查找成功，或直到子表不存在为止，此时查找不成功。</p>
+<p><img src="http://oxwng5pql.bkt.clouddn.com/%7BG%7D9FT%5D%60A%29JO$BK$5F%5DFP3Y.png" alt="命中查找" title="参考图片"></p>
+<p><font color="gold" size="6">从这里我们可以了解二分查找适用于有序表，下面我们可以看一下用C#实现的二分查找</font><br>
+        
+          <a class="article-more-a" href="/2017/11/30/BinarySearch/#more">more >></a>
+        
       
 
       
@@ -178,6 +166,21 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">算法第四版</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">基础知识</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -421,11 +424,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂记</a>
+                <a href="javascript:void(0)" class="js-tag color1">算法第四版</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法第四版 ， 基础知识</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
               </li>
             
             <div class="clearfix"></div>
