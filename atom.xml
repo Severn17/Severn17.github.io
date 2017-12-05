@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://github.com/JasonYSQ/JasonYSQ.github.io.git/"/>
+  <link href="http://yoursite.com/"/>
   <updated>2017-12-05T08:52:23.960Z</updated>
-  <id>https://github.com/JasonYSQ/JasonYSQ.github.io.git/</id>
+  <id>http://yoursite.com/</id>
   
   <author>
     <name>Severn</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>C#转义字符</title>
-    <link href="https://github.com/JasonYSQ/JasonYSQ.github.io.git/year/12/05/Char/"/>
-    <id>https://github.com/JasonYSQ/JasonYSQ.github.io.git/year/12/05/Char/</id>
+    <link href="http://yoursite.com/year/12/05/Char/"/>
+    <id>http://yoursite.com/year/12/05/Char/</id>
     <published>2017-12-05T07:35:04.000Z</published>
     <updated>2017-12-05T08:52:23.960Z</updated>
     
@@ -32,14 +32,14 @@
     </summary>
     
     
-      <category term="C#" scheme="https://github.com/JasonYSQ/JasonYSQ.github.io.git/tags/C/"/>
+      <category term="C#" scheme="http://yoursite.com/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>算法第四版_二分法</title>
-    <link href="https://github.com/JasonYSQ/JasonYSQ.github.io.git/year/11/30/BinarySearch/"/>
-    <id>https://github.com/JasonYSQ/JasonYSQ.github.io.git/year/11/30/BinarySearch/</id>
+    <link href="http://yoursite.com/year/11/30/BinarySearch/"/>
+    <id>http://yoursite.com/year/11/30/BinarySearch/</id>
     <published>2017-11-30T10:13:17.000Z</published>
     <updated>2017-12-05T08:56:22.197Z</updated>
     
@@ -52,16 +52,16 @@
     </summary>
     
     
-      <category term="算法第四版" scheme="https://github.com/JasonYSQ/JasonYSQ.github.io.git/tags/%E7%AE%97%E6%B3%95%E7%AC%AC%E5%9B%9B%E7%89%88/"/>
+      <category term="算法第四版" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95%E7%AC%AC%E5%9B%9B%E7%89%88/"/>
     
-      <category term="基础知识" scheme="https://github.com/JasonYSQ/JasonYSQ.github.io.git/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+      <category term="基础知识" scheme="http://yoursite.com/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
   </entry>
   
   <entry>
     <title>hexo的使用</title>
-    <link href="https://github.com/JasonYSQ/JasonYSQ.github.io.git/year/10/16/HexoUse/"/>
-    <id>https://github.com/JasonYSQ/JasonYSQ.github.io.git/year/10/16/HexoUse/</id>
+    <link href="http://yoursite.com/year/10/16/HexoUse/"/>
+    <id>http://yoursite.com/year/10/16/HexoUse/</id>
     <published>2017-10-16T07:37:43.000Z</published>
     <updated>2017-12-05T09:24:28.683Z</updated>
     
@@ -74,7 +74,7 @@
     </summary>
     
     
-      <category term="Hexo" scheme="https://github.com/JasonYSQ/JasonYSQ.github.io.git/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
   </entry>
   
