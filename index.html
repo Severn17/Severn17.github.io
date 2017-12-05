@@ -168,10 +168,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。</p>
-<p>C#中转义字符分2中，一种是\,一种是@。</p>
-<p>@符号在C#中有两个作用<br>作用1、在字符串的前面加@表示取消字符串中的转义<br>例如 string path=@”d:\root\subdir”;<br>作用2、如果用户定义的对象名和系统关键字冲突，可以在变量前面加入@<br>例如 string @Class=”this is a test”;</p>
-<p>转义字符    字符名称<br>\’    单引号<br>\”    双引号<br>\    反斜杠<br>\0    空字符<br>\a    警报符<br>\b    退格<br>\f    换页<br>\n    换行<br>\r    回车<br>\t    水平制表<br>\v    垂直制表    </p>
+        <p>编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。<br>C#中转义字符分2中，一种是\,一种是@。</p>
         
           <a class="article-more-a" href="/year/12/05/Char/#more">more >></a>
         
@@ -247,9 +244,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><font color="#87CEFA" size="6">二分查找</font><br>二分查找又称折半查找，优点是比较次数少，查找速度快，平均性能好，占用系统内存较少；其缺点是要求待查表为有序表，且插入删除困难。因此，折半查找方法适用于不经常变动而查找频繁的有序列表。首先，假设表中元素是按升序排列，将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找到满足条件的记录，使查找成功，或直到子表不存在为止，此时查找不成功。</p>
-<p><img src="http://oxwng5pql.bkt.clouddn.com/%7BG%7D9FT%5D%60A%29JO$BK$5F%5DFP3Y.png" alt="命中查找" title="参考图片"></p>
-<p><font color="gold" size="6">从这里我们可以了解二分查找适用于有序表，下面我们可以看一下用C#实现的二分查找</font><br>
+        <p>二分查找又称折半查找，优点是比较次数少，查找速度快，平均性能好，占用系统内存较少；其缺点是要求待查表为有序表，且插入删除困难。因此，折半查找方法适用于不经常变动而查找频繁的有序列表。首先，假设表中元素是按升序排列，将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找到满足条件的记录，使查找成功，或直到子表不存在为止，此时查找不成功。</p>
         
           <a class="article-more-a" href="/year/11/30/BinarySearch/#more">more >></a>
         
@@ -329,7 +324,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>hexo new “postName”       #新建文章<br>hexo new page “pageName”  #新建页面<br>hexo generate             #生成静态页面至public目录<br>hexo server               #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>hexo deploy               #部署到GitHub<br>hexo help                 #查看帮助<br>hexo version              #查看Hexo的版本</p>
+        <p>hexo new “postName”       #新建文章<br>hexo new page “pageName”  #新建页面<br>hexo generate             #生成静态页面至public目录<br>
         
           <a class="article-more-a" href="/year/10/16/HexoUse/#more">more >></a>
         
@@ -474,6 +469,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">C#</a>
               </li>
              
@@ -483,14 +482,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
             
             <div class="clearfix"></div>

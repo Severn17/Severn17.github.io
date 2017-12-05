@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>C#转义字符 | SevernHome</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。 C#中转义字符分2中，一种是\,一种是@。 @符号在C#中有两个作用作用1、在字符串的前面加@表示取消字符串中的转义例如 string path=@”d:\root\subdir”;作用2、如果用户定义的对象名和系统关键字冲突，可以在变量前面加入@例如 string @Class=”this is a test”">
+  <meta name="description" content="编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。C#中转义字符分2中，一种是\,一种是@。">
 <meta name="keywords" content="C#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C#转义字符">
 <meta property="og:url" content="http://yoursite.com/year/12/05/Char/index.html">
 <meta property="og:site_name" content="SevernHome">
-<meta property="og:description" content="编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。 C#中转义字符分2中，一种是\,一种是@。 @符号在C#中有两个作用作用1、在字符串的前面加@表示取消字符串中的转义例如 string path=@”d:\root\subdir”;作用2、如果用户定义的对象名和系统关键字冲突，可以在变量前面加入@例如 string @Class=”this is a test”">
-<meta property="og:updated_time" content="2017-12-05T08:28:26.217Z">
+<meta property="og:description" content="编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。C#中转义字符分2中，一种是\,一种是@。">
+<meta property="og:updated_time" content="2017-12-05T08:52:23.960Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C#转义字符">
-<meta name="twitter:description" content="编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。 C#中转义字符分2中，一种是\,一种是@。 @符号在C#中有两个作用作用1、在字符串的前面加@表示取消字符串中的转义例如 string path=@”d:\root\subdir”;作用2、如果用户定义的对象名和系统关键字冲突，可以在变量前面加入@例如 string @Class=”this is a test”">
+<meta name="twitter:description" content="编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。C#中转义字符分2中，一种是\,一种是@。">
   
     <link rel="alternative" href="/atom.xml" title="SevernHome" type="application/atom+xml">
   
@@ -171,11 +171,10 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。</p>
-<p>C#中转义字符分2中，一种是\,一种是@。</p>
+        <p>编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。<br>C#中转义字符分2中，一种是\,一种是@。</p>
+<a id="more"></a>
 <p>@符号在C#中有两个作用<br>作用1、在字符串的前面加@表示取消字符串中的转义<br>例如 string path=@”d:\root\subdir”;<br>作用2、如果用户定义的对象名和系统关键字冲突，可以在变量前面加入@<br>例如 string @Class=”this is a test”;</p>
 <p>转义字符    字符名称<br>\’    单引号<br>\”    双引号<br>\    反斜杠<br>\0    空字符<br>\a    警报符<br>\b    退格<br>\f    换页<br>\n    换行<br>\r    回车<br>\t    水平制表<br>\v    垂直制表    </p>
-<a id="more"></a>
 <p>一 字符串中的用法<br>Verbatim字符串<br>    对于verbatim字符串，编译 器会严格按照原样对其进行解释。也就是说，即使这个字符串跨越多行，或是包含转义字符，编译器也将不予理会，即这些格式和转义符将按照原样输出。唯一例外的是引号，编译器必须将其转义，因为只有这样才能确定字符串的边界。<br>    Verbatim字符串的定义语法为以@符号开始，后面紧跟包含在引号中的字符串。例如：<br>string sample = @”Hello”;<br>string sample = @”Hello\tworld”; //生成Hello\tworld<br>以下是一个实用的示例：<br>string sample=@”C:\My Documents\sample.txt”;<br>//结果为：C:\My Documents\sample.txt，如同语句：string sample=”C:\My Documents\sample.txt”<br>    若想在Verbatim字符串内使用引号，必须使用附加的引号组将其转义。例如，生成字符串”Hi”的代码如下：<br>String s=@” “ “Hi”””; //注意：两边都有3个引号<br>上述代码将生成下列字符串：<br>“Hi”</p>
 <p>字符@表示，其后的字符串是个“逐字字符串”(verbatim string)。<br>@只能对字符串常量作用。<br>1.用于文件路径<br>以下是引用片段：<br>string s_FilePath =”C:\Program Files\Microsoft.NET\test.txt”;<br>相当于<br>以下是引用片段：<br>string s_FilePath =@”C:\Program Files\Microsoft.NET\test.txt”;</p>
 <p>2.用@表示的字符串能够跨越数行。用于在CS中写JS或SQL代码比较方便。<br>以下是引用片段：<br>string s_MultiRows = @”Line1<br>Line2<br>Line3”;<br>string s_JavaScript = @”<br>“; </p>
@@ -423,6 +422,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">C#</a>
               </li>
              
@@ -432,14 +435,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
             
             <div class="clearfix"></div>
