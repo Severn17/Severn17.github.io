@@ -41,7 +41,7 @@
     <link href="http://www.yangshiqi.cn/year/11/30/BinarySearch/"/>
     <id>http://www.yangshiqi.cn/year/11/30/BinarySearch/</id>
     <published>2017-11-30T10:13:17.000Z</published>
-    <updated>2017-12-05T08:56:22.197Z</updated>
+    <updated>2017-12-07T07:26:22.063Z</updated>
     
     <content type="html"><![CDATA[<p>二分查找又称折半查找，优点是比较次数少，查找速度快，平均性能好，占用系统内存较少；其缺点是要求待查表为有序表，且插入删除困难。因此，折半查找方法适用于不经常变动而查找频繁的有序列表。首先，假设表中元素是按升序排列，将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找到满足条件的记录，使查找成功，或直到子表不存在为止，此时查找不成功。</p><a id="more"></a><p><img src="http://oxwng5pql.bkt.clouddn.com/%7BG%7D9FT%5D%60A%29JO$BK$5F%5DFP3Y.png" alt="命中查找" title="参考图片"></p><font color="gold" size="6">从这里我们可以了解二分查找适用于有序表，下面我们可以看一下用C#实现的二分查找</font><p><font color="#87CEFA" size="5">二分查找   递归</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">///&lt;param name=&quot;arr&quot;&gt;数组&lt;/param&gt;</div><div class="line">///&lt;param name=&quot;low&quot;&gt;开始索引 0&lt;/param&gt;</div><div class="line">///&lt;param name=&quot;high&quot;&gt;结束索引 &lt;/param&gt;</div><div class="line">///&lt;param name=&quot;key&quot;&gt;要查找的对象&lt;/param&gt;</div><div class="line">public static int BinarySearch(int[] arr, int low, int high, int key)</div><div class="line">&#123;</div><div class="line">    int mid = (low + high) / 2;</div><div class="line">    if (low &gt; high)</div><div class="line">        return -1;</div><div class="line">    else</div><div class="line">    &#123;</div><div class="line">        if (arr[mid] == key)</div><div class="line">            return mid;</div><div class="line">        else if (arr[mid] &gt; key)</div><div class="line">            return BinarySearch(arr, low, mid - 1, key);</div><div class="line">        else</div><div class="line">            return BinarySearch(arr, mid + 1, high, key);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p><font color="#87CEFA" size="5">二分查找   非递归</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">///&lt;param name=&quot;arr&quot;&gt;数组&lt;/param&gt;</div><div class="line">///&lt;param name=&quot;key&quot;&gt;要查找的对象&lt;/param&gt;</div><div class="line">public static int BinarySearch(int key,int[] arr)</div><div class="line">&#123;</div><div class="line">    int low = 0;</div><div class="line">    int max = arr.Length - 1;</div><div class="line">    while (low&lt;=max)</div><div class="line">    &#123;</div><div class="line">        int mid = low + (max - low) / 2;</div><div class="line">        if (key &lt;arr[ mid]) max = mid - 1;</div><div class="line">        else if (key &gt;arr[ mid]) low = mid + 1;</div><div class="line">        else return mid;</div><div class="line">    &#125;</div><div class="line">    return -1;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
     
@@ -75,6 +75,30 @@
     
     
       <category term="Hexo" scheme="http://www.yangshiqi.cn/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello,World</title>
+    <link href="http://www.yangshiqi.cn/year/10/05/Hello-World/"/>
+    <id>http://www.yangshiqi.cn/year/10/05/Hello-World/</id>
+    <published>2017-10-05T08:02:49.000Z</published>
+    <updated>2017-12-07T08:12:38.006Z</updated>
+    
+    <content type="html"><![CDATA[<p>Unity板砖工，web乱搞协会成员，欢迎大家来到我的农田！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Unity板砖工，web乱搞协会成员，欢迎大家来到我的农田！&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://www.yangshiqi.cn/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
