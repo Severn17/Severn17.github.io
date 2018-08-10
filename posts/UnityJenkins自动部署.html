@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.yangshiqi.cn">
-  <title>C#转义字符 | SevernHome</title>
+  <title>Unity Jenkins 自动部署 | SevernHome</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。C#中转义字符分2中，一种是\,一种是@。">
-<meta name="keywords" content="C#">
+  <meta name="description" content="//TODO">
+<meta name="keywords" content="Unity">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C#转义字符">
-<meta property="og:url" content="http://www.yangshiqi.cn/Char.html">
+<meta property="og:title" content="Unity Jenkins 自动部署">
+<meta property="og:url" content="http://www.yangshiqi.cn/posts/UnityJenkins自动部署.html">
 <meta property="og:site_name" content="SevernHome">
-<meta property="og:description" content="编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。C#中转义字符分2中，一种是\,一种是@。">
-<meta property="og:updated_time" content="2017-12-07T10:52:55.974Z">
+<meta property="og:description" content="//TODO">
+<meta property="og:updated_time" content="2018-08-10T09:47:50.953Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C#转义字符">
-<meta name="twitter:description" content="编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。C#中转义字符分2中，一种是\,一种是@。">
+<meta name="twitter:title" content="Unity Jenkins 自动部署">
+<meta name="twitter:description" content="//TODO">
   
   
     <link rel="icon" href="/favicon.png">
@@ -163,39 +163,27 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Char" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-UnityJenkins自动部署" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      C#转义字符
+      Unity Jenkins 自动部署
     </h1>
   
 
         
-        <a href="/Char.html" class="archive-article-date">
-  	<time datetime="2017-12-05T07:35:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-05</time>
+        <a href="/posts/UnityJenkins自动部署.html" class="archive-article-date">
+  	<time datetime="2018-08-10T09:47:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。<br>C#中转义字符分2中，一种是\,一种是@。</p>
-<a id="more"></a>
-<p>@符号在C#中有两个作用<br>作用1、在字符串的前面加@表示取消字符串中的转义<br>例如 string path=@”d:\root\subdir”;<br>作用2、如果用户定义的对象名和系统关键字冲突，可以在变量前面加入@<br>例如 string @Class=”this is a test”;</p>
-<p>转义字符    字符名称<br>\’    单引号<br>\”    双引号<br>\    反斜杠<br>\0    空字符<br>\a    警报符<br>\b    退格<br>\f    换页<br>\n    换行<br>\r    回车<br>\t    水平制表<br>\v    垂直制表    </p>
-<p>一 字符串中的用法<br>Verbatim字符串<br>    对于verbatim字符串，编译 器会严格按照原样对其进行解释。也就是说，即使这个字符串跨越多行，或是包含转义字符，编译器也将不予理会，即这些格式和转义符将按照原样输出。唯一例外的是引号，编译器必须将其转义，因为只有这样才能确定字符串的边界。<br>    Verbatim字符串的定义语法为以@符号开始，后面紧跟包含在引号中的字符串。例如：<br>string sample = @”Hello”;<br>string sample = @”Hello\tworld”; //生成Hello\tworld<br>以下是一个实用的示例：<br>string sample=@”C:\My Documents\sample.txt”;<br>//结果为：C:\My Documents\sample.txt，如同语句：string sample=”C:\My Documents\sample.txt”<br>    若想在Verbatim字符串内使用引号，必须使用附加的引号组将其转义。例如，生成字符串”Hi”的代码如下：<br>String s=@” “ “Hi”””; //注意：两边都有3个引号<br>上述代码将生成下列字符串：<br>“Hi”</p>
-<p>字符@表示，其后的字符串是个“逐字字符串”(verbatim string)。<br>@只能对字符串常量作用。<br>1.用于文件路径<br>以下是引用片段：<br>string s_FilePath =”C:\Program Files\Microsoft.NET\test.txt”;<br>相当于<br>以下是引用片段：<br>string s_FilePath =@”C:\Program Files\Microsoft.NET\test.txt”;</p>
-<p>2.用@表示的字符串能够跨越数行。用于在CS中写JS或SQL代码比较方便。<br>以下是引用片段：<br>string s_MultiRows = @”Line1<br>Line2<br>Line3”;<br>string s_JavaScript = @”<br>“; </p>
-<p>二 标识符中的用法</p>
-<p>在 C# 规范中, @ 可以作为标识符(类名、变量名、方法名等)的第一个字符，以允许C# 中保留关键字作为自己定义的标识符。<br>如<br>以下是引用片段：<br>class @class<br>{<br>public static void @static(bool @bool) {<br>if (@bool)<br>System.Console.WriteLine(“true”);<br>else<br>System.Console.WriteLine(“false”);<br>}<br>}<br>class Class1<br>{<br>static void M() {<br>clu0061ss.stu0061tic(true);<br>}<br>} </p>
-<p>注意，@ 虽然出现在标识符中，但不作为标识符本身的一部分。<br>因此，以上示例，定义了一个名为 class 的类，并包含一个名为 static 的方法，以及一个参数名为了 bool 的形参。</p>
-<p>这样，对于跨语言的移植带来了便利。因为，某个单词在 C# 中作为保留关键字，但是在其他语言中也许不是。</p>
-<p>转自<br>作者 HanbGao 地址：<a href="https://www.cnblogs.com/muran/p/3174865.html" target="_blank" rel="external">https://www.cnblogs.com/muran/p/3174865.html</a></p>
-
+        <h1 id="TODO"><a href="#TODO" class="headerlink" title="//TODO"></a>//TODO</h1>
       
 
       
@@ -208,7 +196,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">C#</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Unity</a>
         		</li>
       		
 		</ul>
@@ -264,7 +252,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.yangshiqi.cn/Char.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.yangshiqi.cn/posts/UnityJenkins自动部署.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -278,18 +266,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/Texture.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Unity Texture的设置
-        
-      </div>
-    </a>
   
-  
-    <a href="/BinarySearch.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">算法第四版_二分法</div>
+    <a href="/posts/MarkDown代码高亮.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MarkDown代码高亮</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -341,9 +320,9 @@ var _hmt = _hmt || [];
 <div class="article-footer-copyright">
 <center>本文由<b><a href="/index.html" target="_blank" title="Severn">Severn</a></b>创作和发表,采用<b>BY</b>-<b>NC</b>-<b>SA</b>国际许可协议进行许可</center>
 
-<center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="Severn">Severn</a></b>,本文标题为<b><a href="/Char.html" target="_blank" title="C#转义字符">C#转义字符</a></b></center>
+<center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="Severn">Severn</a></b>,本文标题为<b><a href="/posts/UnityJenkins自动部署.html" target="_blank" title="Unity Jenkins 自动部署">Unity Jenkins 自动部署</a></b></center>
 
-<center>本文链接为<b><a href="/Char.html" target="_blank" title="C#转义字符">http://www.yangshiqi.cn/Char.html</a></b>.</center>
+<center>本文链接为<b><a href="/posts/UnityJenkins自动部署.html" target="_blank" title="Unity Jenkins 自动部署">http://www.yangshiqi.cn/posts/UnityJenkins自动部署.html</a></b>.</center>
 </div>
 <! -- 添加版权信息 -->
 
@@ -451,7 +430,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">C#</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Unity</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -463,15 +454,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Unity</a>
+                <a href="javascript:void(0)" class="js-tag color3">C#</a>
               </li>
             
             <div class="clearfix"></div>

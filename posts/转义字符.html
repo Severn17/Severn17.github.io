@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.yangshiqi.cn">
-  <title>Tag: 生活杂记 | SevernHome</title>
+  <title>C#转义字符 | SevernHome</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="SevernHome">
-<meta property="og:url" content="http://www.yangshiqi.cn/tags/生活杂记/index.html">
+  <meta name="description" content="编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。C#中转义字符分2中，一种是\,一种是@。">
+<meta name="keywords" content="C#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C#转义字符">
+<meta property="og:url" content="http://www.yangshiqi.cn/posts/转义字符.html">
 <meta property="og:site_name" content="SevernHome">
+<meta property="og:description" content="编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。C#中转义字符分2中，一种是\,一种是@。">
+<meta property="og:updated_time" content="2018-08-10T09:42:33.043Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SevernHome">
+<meta name="twitter:title" content="C#转义字符">
+<meta name="twitter:description" content="编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。C#中转义字符分2中，一种是\,一种是@。">
   
   
     <link rel="icon" href="/favicon.png">
@@ -158,64 +163,207 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-转义字符" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/WarmOneseif.html" class="archive-article-date">
-  	<time datetime="2017-12-10T10:37:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/WarmOneseif.html">冬季取暖攻略</a>
+    <h1 class="article-title" itemprop="name">
+      C#转义字符
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/posts/转义字符.html" class="archive-article-date">
+  	<time datetime="2017-12-05T07:35:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。<br>C#中转义字符分2中，一种是\,一种是@。</p>
+<a id="more"></a>
+<p>@符号在C#中有两个作用<br>作用1、在字符串的前面加@表示取消字符串中的转义<br>例如</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> path=<span class="string">@"d:\root\subdir"</span>;</div></pre></td></tr></table></figure>
+<p>作用2<br>如果用户定义的对象名和系统关键字冲突，可以在变量前面加入@<br>例如</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> @Class=<span class="string">"this is a test"</span>;</div></pre></td></tr></table></figure>
+<p>转义字符<br>字符名称</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">\<span class="string">'    单引号</span></div><div class="line"><span class="string">\"    双引号</span></div><div class="line"><span class="string">\\    反斜杠</span></div><div class="line"><span class="string">\0    空字符</span></div><div class="line"><span class="string">\a    警报符</span></div><div class="line"><span class="string">\b    退格</span></div><div class="line"><span class="string">\f    换页</span></div><div class="line"><span class="string">\n    换行</span></div><div class="line"><span class="string">\r    回车</span></div><div class="line"><span class="string">\t    水平制表</span></div><div class="line"><span class="string">\v    垂直制表</span></div></pre></td></tr></table></figure>
+<p>一 字符串中的用法<br>Verbatim字符串</p>
+<p>对于verbatim字符串，编译 器会严格按照原样对其进行解释。也就是说，即使这个字符串跨越多行，或是包含转义字符，编译器也将不予理会，即这些格式和转义符将按照原样输出。唯一例外的是引号，编译器必须将其转义，因为只有这样才能确定字符串的边界。<br>Verbatim字符串的定义语法为以@符号开始，后面紧跟包含在引号中的字符串。例如：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> sample = <span class="string">@"Hello"</span>;</div><div class="line"><span class="keyword">string</span> sample = <span class="string">@"Hello\tworld"</span>; <span class="comment">//生成Hello\tworld</span></div></pre></td></tr></table></figure>
+<p>以下是一个实用的示例：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> sample=<span class="string">@"C:\My Documents\sample.txt"</span>;</div></pre></td></tr></table></figure>
+<p>//结果为：C:\My Documents\sample.txt，<br>如同语句：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> sample=<span class="string">"C:\\My Documents\\sample.txt"</span></div></pre></td></tr></table></figure>
+<p>若想在Verbatim字符串内使用引号，必须使用附加的引号组将其转义。<br>例如，生成字符串”Hi”的代码如下：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> s=<span class="string">@" "</span> <span class="string">"Hi"</span><span class="string">""</span>;</div></pre></td></tr></table></figure>
+<p>//注意：两边都有3个引号<br>上述代码将生成下列字符串：<br>“Hi”</p>
+<p>字符@表示，其后的字符串是个“逐字字符串”(verbatim string)。<br>@只能对字符串常量作用。<br>1.用于文件路径<br>以下是引用片段：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> s_FilePath =<span class="string">"C:\\Program Files\\Microsoft.NET\\test.txt"</span>;</div></pre></td></tr></table></figure>
+<p>相当于<br>以下是引用片段：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> s_FilePath =<span class="string">@"C:\Program Files\Microsoft.NET\test.txt"</span>;</div></pre></td></tr></table></figure>
+<p>2.用@表示的字符串能够跨越数行。用于在CS中写JS或SQL代码比较方便。<br>以下是引用片段：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> s_MultiRows = <span class="string">@"Line1 Line2 Line3"</span>;</div><div class="line"><span class="keyword">string</span> s_JavaScript = <span class="string">@" "</span>;</div></pre></td></tr></table></figure>
+<p>二 标识符中的用法</p>
+<p>在 C# 规范中, @ 可以作为标识符(类名、变量名、方法名等)的第一个字符，以允许C# 中保留关键字作为自己定义的标识符。<br>如<br>以下是引用片段：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">class @class</div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> @<span class="keyword">static</span>(<span class="keyword">bool</span> @<span class="keyword">bool</span>)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span> (@<span class="keyword">bool</span>)</div><div class="line">            &#123;</div><div class="line">                System.Console.WriteLine(<span class="string">"true"</span>);</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span></div><div class="line">            &#123;</div><div class="line">                System.Console.WriteLine(<span class="string">"false"</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">class</span> <span class="title">Class1</span></div><div class="line">&#123;</div><div class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">M</span>(<span class="params"></span>)</span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        clu0061ss.stu0061tic(<span class="literal">true</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>注意，@ 虽然出现在标识符中，但不作为标识符本身的一部分。<br>因此，以上示例，定义了一个名为 class 的类，并包含一个名为 static 的方法，以及一个参数名为了 bool 的形参。</p>
+<p>这样，对于跨语言的移植带来了便利。因为，某个单词在 C# 中作为保留关键字，但是在其他语言中也许不是。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生活杂记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">C#</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.yangshiqi.cn/posts/转义字符.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/posts/UnityTexture.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Unity Texture的设置
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/posts/算法二分法.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">算法第四版_二分法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+  
+  <!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2151204"></script>
+<!-- UY END -->
+
+<!-- UYAN HOT COMMENT BEGIN -->
+<div id="uyan_hotcmt_unit"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2151204"></script> <!-- 如果已经过加载此行JS，即可不用重复加载 -->
+<!-- UYAN HOT COMMENT END -->
+
   
 
-    
+  
+  
+  
+
+  
+
+  
+
+  
+
+
+
+  <! -- 添加版权信息 -->
+<div class="article-footer-copyright">
+<center>本文由<b><a href="/index.html" target="_blank" title="Severn">Severn</a></b>创作和发表,采用<b>BY</b>-<b>NC</b>-<b>SA</b>国际许可协议进行许可</center>
+
+<center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="Severn">Severn</a></b>,本文标题为<b><a href="/posts/转义字符.html" target="_blank" title="C#转义字符">C#转义字符</a></b></center>
+
+<center>本文链接为<b><a href="/posts/转义字符.html" target="_blank" title="C#转义字符">http://www.yangshiqi.cn/posts/转义字符.html</a></b>.</center>
+</div>
+<! -- 添加版权信息 -->
+
 
 
           </div>
@@ -243,9 +391,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -320,11 +468,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">C#</a>
+                <a href="javascript:void(0)" class="js-tag color1">Unity</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -336,15 +492,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">生活杂记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Unity</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">C#</a>
               </li>
             
             <div class="clearfix"></div>

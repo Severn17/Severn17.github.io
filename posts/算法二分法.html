@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.yangshiqi.cn">
-  <title>MarkDown的入门 | SevernHome</title>
+  <title>算法第四版_二分法 | SevernHome</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="介绍一下环境推荐使用的是vscode，使用的插件是markdownlint，markdownlit这款插件有markdown语法查错功能，非常推荐使用">
-<meta name="keywords" content="markdown">
+  <meta name="description" content="二分查找又称折半查找，优点是比较次数少，查找速度快，平均性能好，占用系统内存较少；其缺点是要求待查表为有序表，且插入删除困难。因此，折半查找方法适用于不经常变动而查找频繁的有序列表。首先，假设表中元素是按升序排列，将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查">
+<meta name="keywords" content="算法第四版,基础知识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MarkDown的入门">
-<meta property="og:url" content="http://www.yangshiqi.cn/MarkDown使用方法.html">
+<meta property="og:title" content="算法第四版_二分法">
+<meta property="og:url" content="http://www.yangshiqi.cn/posts/算法二分法.html">
 <meta property="og:site_name" content="SevernHome">
-<meta property="og:description" content="介绍一下环境推荐使用的是vscode，使用的插件是markdownlint，markdownlit这款插件有markdown语法查错功能，非常推荐使用">
-<meta property="og:updated_time" content="2018-08-10T09:43:04.845Z">
+<meta property="og:description" content="二分查找又称折半查找，优点是比较次数少，查找速度快，平均性能好，占用系统内存较少；其缺点是要求待查表为有序表，且插入删除困难。因此，折半查找方法适用于不经常变动而查找频繁的有序列表。首先，假设表中元素是按升序排列，将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查">
+<meta property="og:image" content="http://oxwng5pql.bkt.clouddn.com/%7BG%7D9FT%5D%60A%29JO$BK$5F%5DFP3Y.png">
+<meta property="og:updated_time" content="2018-08-10T07:25:42.481Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MarkDown的入门">
-<meta name="twitter:description" content="介绍一下环境推荐使用的是vscode，使用的插件是markdownlint，markdownlit这款插件有markdown语法查错功能，非常推荐使用">
+<meta name="twitter:title" content="算法第四版_二分法">
+<meta name="twitter:description" content="二分查找又称折半查找，优点是比较次数少，查找速度快，平均性能好，占用系统内存较少；其缺点是要求待查表为有序表，且插入删除困难。因此，折半查找方法适用于不经常变动而查找频繁的有序列表。首先，假设表中元素是按升序排列，将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查">
+<meta name="twitter:image" content="http://oxwng5pql.bkt.clouddn.com/%7BG%7D9FT%5D%60A%29JO$BK$5F%5DFP3Y.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -163,96 +165,37 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MarkDown使用方法" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-算法二分法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MarkDown的入门
+      算法第四版_二分法
     </h1>
   
 
         
-        <a href="/MarkDown使用方法.html" class="archive-article-date">
-  	<time datetime="2018-08-10T07:38:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
+        <a href="/posts/算法二分法.html" class="archive-article-date">
+  	<time datetime="2017-11-30T10:13:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="介绍一下环境"><a href="#介绍一下环境" class="headerlink" title="介绍一下环境"></a>介绍一下环境</h1><p>推荐使用的是vscode，使用的插件是markdownlint，markdownlit这款插件有markdown语法查错功能，非常推荐使用</p>
+        <p>二分查找又称折半查找，优点是比较次数少，查找速度快，平均性能好，占用系统内存较少；其缺点是要求待查表为有序表，且插入删除困难。因此，折半查找方法适用于不经常变动而查找频繁的有序列表。首先，假设表中元素是按升序排列，将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找到满足条件的记录，使查找成功，或直到子表不存在为止，此时查找不成功。</p>
 <a id="more"></a>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>在想要设为的标题前面加#来表示<br>写法为 #加空格加你的标题，支持六级标题<br>例如：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="section"># 标题</span></div><div class="line"><span class="section">## 子标题</span></div><div class="line"><span class="section">### 子子标题</span></div><div class="line">...</div></pre></td></tr></table></figure>
-<p>显示：</p>
-<h1 id="测试-标题"><a href="#测试-标题" class="headerlink" title="测试 标题"></a>测试 标题</h1><h2 id="测试-子标题"><a href="#测试-子标题" class="headerlink" title="测试 子标题"></a>测试 子标题</h2><h3 id="测试-子子标题"><a href="#测试-子子标题" class="headerlink" title="测试 子子标题"></a>测试 子子标题</h3><h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><h3 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h3><p>要加粗的文字左右分别用两个*号包起来</p>
-<h3 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h3><p>要倾斜的文字左右分别用一个*号包起来</p>
-<h3 id="斜体加粗"><a href="#斜体加粗" class="headerlink" title="斜体加粗"></a>斜体加粗</h3><p>要倾斜和加粗的文字左右分别用三个*号包起来</p>
-<h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h3><p>要加删除线的文字左右分别用两个~~号包起来</p>
-<p>例如：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="strong">**这是加粗的文字**</span></div><div class="line"><span class="emphasis">*这是倾斜的文字*</span>`</div><div class="line"><span class="strong">***斜体加粗的文字**</span>*</div><div class="line">~~加删除线的文字~~</div></pre></td></tr></table></figure>
-<p>显示：<br><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em>`<br><strong><em>斜体加粗的文字</em></strong><br><del>加删除线的文字</del></p>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>在引用的文字前面加&gt;。可以加多个</p>
-<p>例如：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt;引用</div><div class="line">&gt;&gt;引用</div><div class="line">&gt;&gt;&gt;引用</div></pre></td></tr></table></figure>
-<p>显示：</p>
-<blockquote>
-<p>引用</p>
-<blockquote>
-<p>引用</p>
-<blockquote>
-<p>引用</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>三个及以上的-或者*都可以，建议使用三个-，其他的不建议</p>
-<p>例如：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">----</div><div class="line"><span class="emphasis">***</span></div><div class="line"><span class="strong">*****</span></div></pre></td></tr></table></figure>
-<h2 id="显示："><a href="#显示：" class="headerlink" title="显示："></a>显示：</h2><hr>
-<hr>
-<hr>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>例如：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">![<span class="string">图片alt</span>](<span class="link">图片地址 ''图片title''</span>)</div><div class="line"></div><div class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</div><div class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</div></pre></td></tr></table></figure>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>注意：</p>
-<p>-:  居左对齐<br>:-: 居中对齐<br>-:  居右对齐<br>1.默认的为标题居中对齐，内容居左对齐<br>2.使用的时候，表格的语句上一行必须为空格，否则表格不显示</p>
-<p>例如</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">表头|表头|表头</div><div class="line">---|:--:|---:</div><div class="line">内容|内容|内容</div><div class="line">内容|内容|内容</div><div class="line"></div><div class="line">第二行分割表头和内容。</div></pre></td></tr></table></figure>
-<p>显示:</p>
-<table>
-<thead>
-<tr>
-<th>人物</th>
-<th style="text-align:center">ID</th>
-<th style="text-align:right">技能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>虞姬</td>
-<td style="text-align:center">1</td>
-<td style="text-align:right">大风来</td>
-</tr>
-<tr>
-<td>韩信</td>
-<td style="text-align:center">2</td>
-<td style="text-align:right">杀意之枪</td>
-</tr>
-<tr>
-<td>亚瑟</td>
-<td style="text-align:center">3</td>
-<td style="text-align:right">亚瑟</td>
-</tr>
-</tbody>
-</table>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>例如：</p>
-<p>括号为防止转义，括号无意义，实际用的话不要加括号</p>
-<p>单行代码使用一个反引号包起来<br><code>System.Console.WriteLine(Hello,World);</code></p>
-<p>代码块使用三个反引号包起来</p>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">(```)</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Show</span>(<span class="params"></span>)</span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        System.Console.WriteLine(<span class="string">"Hello World"</span>);</div><div class="line">    &#125;</div><div class="line">(```)</div></pre></td></tr></table></figure>
+<p><img src="http://oxwng5pql.bkt.clouddn.com/%7BG%7D9FT%5D%60A%29JO$BK$5F%5DFP3Y.png" alt="命中查找" title="参考图片"></p>
+<font color="gold" size="6" <="" font="">&gt;从这里我们可以了解二分查找适用于有序表，下面我们可以看一下用C#实现的二分查找</font>
 
+<font color="#87CEFA" size="5" 二分查找="" 递归<="" font="">
+
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment"><span class="doctag">///</span><span class="doctag">&lt;param name="arr"&gt;</span>数组<span class="doctag">&lt;/param&gt;</span></span></div><div class="line"><span class="comment"><span class="doctag">///</span><span class="doctag">&lt;param name="low"&gt;</span>开始索引 0<span class="doctag">&lt;/param&gt;</span></span></div><div class="line"><span class="comment"><span class="doctag">///</span><span class="doctag">&lt;param name="high"&gt;</span>结束索引 <span class="doctag">&lt;/param&gt;</span></span></div><div class="line"><span class="comment"><span class="doctag">///</span><span class="doctag">&lt;param name="key"&gt;</span>要查找的对象<span class="doctag">&lt;/param&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">BinarySearch</span>(<span class="params"><span class="keyword">int</span>[] arr, <span class="keyword">int</span> low, <span class="keyword">int</span> high, <span class="keyword">int</span> key</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> mid = (low + high) / <span class="number">2</span>;</div><div class="line">    <span class="keyword">if</span> (low &gt; high)</div><div class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    <span class="keyword">else</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span> (arr[mid] == key)</div><div class="line">            <span class="keyword">return</span> mid;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (arr[mid] &gt; key)</div><div class="line">            <span class="keyword">return</span> BinarySearch(arr, low, mid - <span class="number">1</span>, key);</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="keyword">return</span> BinarySearch(arr, mid + <span class="number">1</span>, high, key);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<font color="#87CEFA" size="5" 二分查找="" 非递归<="" font="">
+
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment"><span class="doctag">///</span><span class="doctag">&lt;param name="arr"&gt;</span>数组<span class="doctag">&lt;/param&gt;</span></span></div><div class="line"><span class="comment"><span class="doctag">///</span><span class="doctag">&lt;param name="key"&gt;</span>要查找的对象<span class="doctag">&lt;/param&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">BinarySearch</span>(<span class="params"><span class="keyword">int</span> key,<span class="keyword">int</span>[] arr</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> low = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> max = arr.Length - <span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span> (low&lt;=max)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> mid = low + (max - low) / <span class="number">2</span>;</div><div class="line">        <span class="keyword">if</span> (key &lt;arr[ mid]) max = mid - <span class="number">1</span>;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (key &gt;arr[ mid]) low = mid + <span class="number">1</span>;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">return</span> mid;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></font></font>
       
 
       
@@ -265,7 +208,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">算法第四版</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">基础知识</a>
         		</li>
       		
 		</ul>
@@ -321,7 +268,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.yangshiqi.cn/MarkDown使用方法.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.yangshiqi.cn/posts/算法二分法.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -335,18 +282,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/MarkDown代码高亮.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/posts/转义字符.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          MarkDown代码高亮
+          C#转义字符
         
       </div>
     </a>
   
   
-    <a href="/UnityTexture.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Unity Texture的设置</div>
+    <a href="/posts/Hexo使用方法.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo的使用</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -398,9 +345,9 @@ var _hmt = _hmt || [];
 <div class="article-footer-copyright">
 <center>本文由<b><a href="/index.html" target="_blank" title="Severn">Severn</a></b>创作和发表,采用<b>BY</b>-<b>NC</b>-<b>SA</b>国际许可协议进行许可</center>
 
-<center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="Severn">Severn</a></b>,本文标题为<b><a href="/MarkDown使用方法.html" target="_blank" title="MarkDown的入门">MarkDown的入门</a></b></center>
+<center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="Severn">Severn</a></b>,本文标题为<b><a href="/posts/算法二分法.html" target="_blank" title="算法第四版_二分法">算法第四版_二分法</a></b></center>
 
-<center>本文链接为<b><a href="/MarkDown使用方法.html" target="_blank" title="MarkDown的入门">http://www.yangshiqi.cn/MarkDown使用方法.html</a></b>.</center>
+<center>本文链接为<b><a href="/posts/算法二分法.html" target="_blank" title="算法第四版_二分法">http://www.yangshiqi.cn/posts/算法二分法.html</a></b>.</center>
 </div>
 <! -- 添加版权信息 -->
 
@@ -512,15 +459,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Unity</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">

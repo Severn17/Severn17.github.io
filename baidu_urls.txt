@@ -1,8 +1,8 @@
-http://www.yangshiqi.cn/UnityJenkins自动部署.html
-http://www.yangshiqi.cn/MarkDown代码高亮.html
-http://www.yangshiqi.cn/MarkDown使用方法.html
-http://www.yangshiqi.cn/UnityTexture.html
-http://www.yangshiqi.cn/转义字符.html
-http://www.yangshiqi.cn/算法二分法.html
-http://www.yangshiqi.cn/Hexo使用方法.html
-http://www.yangshiqi.cn/Hello-World.html
+http://www.yangshiqi.cn/posts/UnityJenkins自动部署.html
+http://www.yangshiqi.cn/posts/MarkDown代码高亮.html
+http://www.yangshiqi.cn/posts/MarkDown使用方法.html
+http://www.yangshiqi.cn/posts/UnityTexture.html
+http://www.yangshiqi.cn/posts/转义字符.html
+http://www.yangshiqi.cn/posts/算法二分法.html
+http://www.yangshiqi.cn/posts/Hexo使用方法.html
+http://www.yangshiqi.cn/posts/Hello-World.html
