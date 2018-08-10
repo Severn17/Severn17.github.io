@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="SevernHome">
 <meta property="og:description" content="二分查找又称折半查找，优点是比较次数少，查找速度快，平均性能好，占用系统内存较少；其缺点是要求待查表为有序表，且插入删除困难。因此，折半查找方法适用于不经常变动而查找频繁的有序列表。首先，假设表中元素是按升序排列，将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查">
 <meta property="og:image" content="http://oxwng5pql.bkt.clouddn.com/%7BG%7D9FT%5D%60A%29JO$BK$5F%5DFP3Y.png">
-<meta property="og:updated_time" content="2018-08-10T04:16:30.093Z">
+<meta property="og:updated_time" content="2018-08-10T07:25:42.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法第四版_二分法">
 <meta name="twitter:description" content="二分查找又称折半查找，优点是比较次数少，查找速度快，平均性能好，占用系统内存较少；其缺点是要求待查表为有序表，且插入删除困难。因此，折半查找方法适用于不经常变动而查找频繁的有序列表。首先，假设表中元素是按升序排列，将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查">
@@ -188,11 +188,14 @@ var _hmt = _hmt || [];
         <p>二分查找又称折半查找，优点是比较次数少，查找速度快，平均性能好，占用系统内存较少；其缺点是要求待查表为有序表，且插入删除困难。因此，折半查找方法适用于不经常变动而查找频繁的有序列表。首先，假设表中元素是按升序排列，将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找到满足条件的记录，使查找成功，或直到子表不存在为止，此时查找不成功。</p>
 <a id="more"></a>
 <p><img src="http://oxwng5pql.bkt.clouddn.com/%7BG%7D9FT%5D%60A%29JO$BK$5F%5DFP3Y.png" alt="命中查找" title="参考图片"></p>
-<font color="gold" size="6">从这里我们可以了解二分查找适用于有序表，下面我们可以看一下用C#实现的二分查找</font>
+<font color="gold" size="6" <="" font="">&gt;从这里我们可以了解二分查找适用于有序表，下面我们可以看一下用C#实现的二分查找</font>
 
-<p><font color="#87CEFA" size="5">二分查找   递归</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">///&lt;param name=&quot;arr&quot;&gt;数组&lt;/param&gt;</div><div class="line">///&lt;param name=&quot;low&quot;&gt;开始索引 0&lt;/param&gt;</div><div class="line">///&lt;param name=&quot;high&quot;&gt;结束索引 &lt;/param&gt;</div><div class="line">///&lt;param name=&quot;key&quot;&gt;要查找的对象&lt;/param&gt;</div><div class="line">public static int BinarySearch(int[] arr, int low, int high, int key)</div><div class="line">&#123;</div><div class="line">    int mid = (low + high) / 2;</div><div class="line">    if (low &gt; high)</div><div class="line">        return -1;</div><div class="line">    else</div><div class="line">    &#123;</div><div class="line">        if (arr[mid] == key)</div><div class="line">            return mid;</div><div class="line">        else if (arr[mid] &gt; key)</div><div class="line">            return BinarySearch(arr, low, mid - 1, key);</div><div class="line">        else</div><div class="line">            return BinarySearch(arr, mid + 1, high, key);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><font color="#87CEFA" size="5">二分查找   非递归</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">///&lt;param name=&quot;arr&quot;&gt;数组&lt;/param&gt;</div><div class="line">///&lt;param name=&quot;key&quot;&gt;要查找的对象&lt;/param&gt;</div><div class="line">public static int BinarySearch(int key,int[] arr)</div><div class="line">&#123;</div><div class="line">    int low = 0;</div><div class="line">    int max = arr.Length - 1;</div><div class="line">    while (low&lt;=max)</div><div class="line">    &#123;</div><div class="line">        int mid = low + (max - low) / 2;</div><div class="line">        if (key &lt;arr[ mid]) max = mid - 1;</div><div class="line">        else if (key &gt;arr[ mid]) low = mid + 1;</div><div class="line">        else return mid;</div><div class="line">    &#125;</div><div class="line">    return -1;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<font color="#87CEFA" size="5" 二分查找="" 递归<="" font="">
 
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment"><span class="doctag">///</span><span class="doctag">&lt;param name="arr"&gt;</span>数组<span class="doctag">&lt;/param&gt;</span></span></div><div class="line"><span class="comment"><span class="doctag">///</span><span class="doctag">&lt;param name="low"&gt;</span>开始索引 0<span class="doctag">&lt;/param&gt;</span></span></div><div class="line"><span class="comment"><span class="doctag">///</span><span class="doctag">&lt;param name="high"&gt;</span>结束索引 <span class="doctag">&lt;/param&gt;</span></span></div><div class="line"><span class="comment"><span class="doctag">///</span><span class="doctag">&lt;param name="key"&gt;</span>要查找的对象<span class="doctag">&lt;/param&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">BinarySearch</span>(<span class="params"><span class="keyword">int</span>[] arr, <span class="keyword">int</span> low, <span class="keyword">int</span> high, <span class="keyword">int</span> key</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> mid = (low + high) / <span class="number">2</span>;</div><div class="line">    <span class="keyword">if</span> (low &gt; high)</div><div class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    <span class="keyword">else</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span> (arr[mid] == key)</div><div class="line">            <span class="keyword">return</span> mid;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (arr[mid] &gt; key)</div><div class="line">            <span class="keyword">return</span> BinarySearch(arr, low, mid - <span class="number">1</span>, key);</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="keyword">return</span> BinarySearch(arr, mid + <span class="number">1</span>, high, key);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<font color="#87CEFA" size="5" 二分查找="" 非递归<="" font="">
+
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment"><span class="doctag">///</span><span class="doctag">&lt;param name="arr"&gt;</span>数组<span class="doctag">&lt;/param&gt;</span></span></div><div class="line"><span class="comment"><span class="doctag">///</span><span class="doctag">&lt;param name="key"&gt;</span>要查找的对象<span class="doctag">&lt;/param&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">BinarySearch</span>(<span class="params"><span class="keyword">int</span> key,<span class="keyword">int</span>[] arr</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> low = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> max = arr.Length - <span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span> (low&lt;=max)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> mid = low + (max - low) / <span class="number">2</span>;</div><div class="line">        <span class="keyword">if</span> (key &lt;arr[ mid]) max = mid - <span class="number">1</span>;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (key &gt;arr[ mid]) low = mid + <span class="number">1</span>;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">return</span> mid;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></font></font>
       
 
       
@@ -452,6 +455,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">算法第四版</a>
               </li>
              
@@ -460,7 +471,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">C#</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -468,11 +479,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">C#</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
             <div class="clearfix"></div>

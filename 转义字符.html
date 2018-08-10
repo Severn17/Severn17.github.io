@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://www.yangshiqi.cn/转义字符.html">
 <meta property="og:site_name" content="SevernHome">
 <meta property="og:description" content="编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。C#中转义字符分2中，一种是\,一种是@。">
-<meta property="og:updated_time" content="2018-08-10T04:12:12.687Z">
+<meta property="og:updated_time" content="2018-08-10T09:42:33.043Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C#转义字符">
 <meta name="twitter:description" content="编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。C#中转义字符分2中，一种是\,一种是@。">
@@ -185,13 +185,31 @@ var _hmt = _hmt || [];
       
         <p>编程中很多细节问题我们都要十分的注意，要不一个小小的字母错误就能引起程序的无法运行。<br>C#中转义字符分2中，一种是\,一种是@。</p>
 <a id="more"></a>
-<p>@符号在C#中有两个作用<br>作用1、在字符串的前面加@表示取消字符串中的转义<br>例如 string path=@”d:\root\subdir”;<br>作用2、如果用户定义的对象名和系统关键字冲突，可以在变量前面加入@<br>例如 string @Class=”this is a test”;</p>
-<p>转义字符    字符名称<br>\’    单引号<br>\”    双引号<br>\    反斜杠<br>\0    空字符<br>\a    警报符<br>\b    退格<br>\f    换页<br>\n    换行<br>\r    回车<br>\t    水平制表<br>\v    垂直制表    </p>
-<p>一 字符串中的用法<br>Verbatim字符串<br>    对于verbatim字符串，编译 器会严格按照原样对其进行解释。也就是说，即使这个字符串跨越多行，或是包含转义字符，编译器也将不予理会，即这些格式和转义符将按照原样输出。唯一例外的是引号，编译器必须将其转义，因为只有这样才能确定字符串的边界。<br>    Verbatim字符串的定义语法为以@符号开始，后面紧跟包含在引号中的字符串。例如：<br>string sample = @”Hello”;<br>string sample = @”Hello\tworld”; //生成Hello\tworld<br>以下是一个实用的示例：<br>string sample=@”C:\My Documents\sample.txt”;<br>//结果为：C:\My Documents\sample.txt，如同语句：string sample=”C:\My Documents\sample.txt”<br>    若想在Verbatim字符串内使用引号，必须使用附加的引号组将其转义。例如，生成字符串”Hi”的代码如下：<br>String s=@” “ “Hi”””; //注意：两边都有3个引号<br>上述代码将生成下列字符串：<br>“Hi”</p>
-<p>字符@表示，其后的字符串是个“逐字字符串”(verbatim string)。<br>@只能对字符串常量作用。<br>1.用于文件路径<br>以下是引用片段：<br>string s_FilePath =”C:\Program Files\Microsoft.NET\test.txt”;<br>相当于<br>以下是引用片段：<br>string s_FilePath =@”C:\Program Files\Microsoft.NET\test.txt”;</p>
-<p>2.用@表示的字符串能够跨越数行。用于在CS中写JS或SQL代码比较方便。<br>以下是引用片段：<br>string s_MultiRows = @”Line1<br>Line2<br>Line3”;<br>string s_JavaScript = @”<br>“; </p>
+<p>@符号在C#中有两个作用<br>作用1、在字符串的前面加@表示取消字符串中的转义<br>例如</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> path=<span class="string">@"d:\root\subdir"</span>;</div></pre></td></tr></table></figure>
+<p>作用2<br>如果用户定义的对象名和系统关键字冲突，可以在变量前面加入@<br>例如</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> @Class=<span class="string">"this is a test"</span>;</div></pre></td></tr></table></figure>
+<p>转义字符<br>字符名称</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">\<span class="string">'    单引号</span></div><div class="line"><span class="string">\"    双引号</span></div><div class="line"><span class="string">\\    反斜杠</span></div><div class="line"><span class="string">\0    空字符</span></div><div class="line"><span class="string">\a    警报符</span></div><div class="line"><span class="string">\b    退格</span></div><div class="line"><span class="string">\f    换页</span></div><div class="line"><span class="string">\n    换行</span></div><div class="line"><span class="string">\r    回车</span></div><div class="line"><span class="string">\t    水平制表</span></div><div class="line"><span class="string">\v    垂直制表</span></div></pre></td></tr></table></figure>
+<p>一 字符串中的用法<br>Verbatim字符串</p>
+<p>对于verbatim字符串，编译 器会严格按照原样对其进行解释。也就是说，即使这个字符串跨越多行，或是包含转义字符，编译器也将不予理会，即这些格式和转义符将按照原样输出。唯一例外的是引号，编译器必须将其转义，因为只有这样才能确定字符串的边界。<br>Verbatim字符串的定义语法为以@符号开始，后面紧跟包含在引号中的字符串。例如：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> sample = <span class="string">@"Hello"</span>;</div><div class="line"><span class="keyword">string</span> sample = <span class="string">@"Hello\tworld"</span>; <span class="comment">//生成Hello\tworld</span></div></pre></td></tr></table></figure>
+<p>以下是一个实用的示例：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> sample=<span class="string">@"C:\My Documents\sample.txt"</span>;</div></pre></td></tr></table></figure>
+<p>//结果为：C:\My Documents\sample.txt，<br>如同语句：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> sample=<span class="string">"C:\\My Documents\\sample.txt"</span></div></pre></td></tr></table></figure>
+<p>若想在Verbatim字符串内使用引号，必须使用附加的引号组将其转义。<br>例如，生成字符串”Hi”的代码如下：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> s=<span class="string">@" "</span> <span class="string">"Hi"</span><span class="string">""</span>;</div></pre></td></tr></table></figure>
+<p>//注意：两边都有3个引号<br>上述代码将生成下列字符串：<br>“Hi”</p>
+<p>字符@表示，其后的字符串是个“逐字字符串”(verbatim string)。<br>@只能对字符串常量作用。<br>1.用于文件路径<br>以下是引用片段：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> s_FilePath =<span class="string">"C:\\Program Files\\Microsoft.NET\\test.txt"</span>;</div></pre></td></tr></table></figure>
+<p>相当于<br>以下是引用片段：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> s_FilePath =<span class="string">@"C:\Program Files\Microsoft.NET\test.txt"</span>;</div></pre></td></tr></table></figure>
+<p>2.用@表示的字符串能够跨越数行。用于在CS中写JS或SQL代码比较方便。<br>以下是引用片段：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">string</span> s_MultiRows = <span class="string">@"Line1 Line2 Line3"</span>;</div><div class="line"><span class="keyword">string</span> s_JavaScript = <span class="string">@" "</span>;</div></pre></td></tr></table></figure>
 <p>二 标识符中的用法</p>
-<p>在 C# 规范中, @ 可以作为标识符(类名、变量名、方法名等)的第一个字符，以允许C# 中保留关键字作为自己定义的标识符。<br>如<br>以下是引用片段：<br>class @class<br>{<br>public static void @static(bool @bool) {<br>if (@bool)<br>System.Console.WriteLine(“true”);<br>else<br>System.Console.WriteLine(“false”);<br>}<br>}<br>class Class1<br>{<br>static void M() {<br>clu0061ss.stu0061tic(true);<br>}<br>} </p>
+<p>在 C# 规范中, @ 可以作为标识符(类名、变量名、方法名等)的第一个字符，以允许C# 中保留关键字作为自己定义的标识符。<br>如<br>以下是引用片段：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">class @class</div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> @<span class="keyword">static</span>(<span class="keyword">bool</span> @<span class="keyword">bool</span>)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span> (@<span class="keyword">bool</span>)</div><div class="line">            &#123;</div><div class="line">                System.Console.WriteLine(<span class="string">"true"</span>);</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span></div><div class="line">            &#123;</div><div class="line">                System.Console.WriteLine(<span class="string">"false"</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">class</span> <span class="title">Class1</span></div><div class="line">&#123;</div><div class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">M</span>(<span class="params"></span>)</span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        clu0061ss.stu0061tic(<span class="literal">true</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>注意，@ 虽然出现在标识符中，但不作为标识符本身的一部分。<br>因此，以上示例，定义了一个名为 class 的类，并包含一个名为 static 的方法，以及一个参数名为了 bool 的形参。</p>
 <p>这样，对于跨语言的移植带来了便利。因为，某个单词在 C# 中作为保留关键字，但是在其他语言中也许不是。</p>
 
@@ -450,6 +468,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">算法第四版</a>
               </li>
              
@@ -458,7 +484,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">C#</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -466,11 +492,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">C#</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
             <div class="clearfix"></div>
