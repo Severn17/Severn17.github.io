@@ -1,5 +1,4 @@
 http://www.yangshiqi.cn/Texture.html
-http://www.yangshiqi.cn/WarmOneseif.html
 http://www.yangshiqi.cn/Char.html
 http://www.yangshiqi.cn/BinarySearch.html
 http://www.yangshiqi.cn/HexoUse.html
